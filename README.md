@@ -1,2 +1,0 @@
-# slothwarehq
-website repo
