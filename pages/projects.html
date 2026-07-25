@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SlothWare HQ | Projects</title>
+</head>
+<body>
+    <strong><a href="../index.html">Home</a></strong>
+    <h1>Active Projects</h1>
+    <p>This is a simple recipe website, it doesn't have much, but is my first project through "The Odin Project".<br><a href="https://slothwaregit.github.io/odin-recipes/" target="_blank" rel="noreferrer noopener">View the Recipe Website - Odin Recipes</a></p>
+    <!-- Flexbox container to arrange items side-by-side with spacing -->
+    <div style="display: flex; gap: 20px; flex-wrap: wrap; align-items: flex-start;">
+
+    <!-- FIRST IMAGE ACCORDION -->
+    <details name="recipe-gallery" style="max-width: 200px;">
+        <summary style="cursor: pointer; list-style: none;">
+        <img src="../img/odin-recipes-1.png" alt="Odin Recipes Thumbnail" style="width: 200px; height: auto; border: 1px solid #7c7c7c;">
+        <p style="font-size: 14px; color: #555; margin: 5px 0; text-align: center;">Click to enlarge</p>
+        </summary>
+        <!-- Absolute positioning breaks it out of the flex row so it expands below -->
+        <div style="position: absolute; left: 0; right: 0; text-align: center; margin-top: 10px; z-index: 10;">
+        <img src="../img/odin-recipes-1.png" alt="Odin Recipes Full Size" style="width: 1400px; height: auto; border: 3px solid #7c7c7c;">
+        </div>
+    </details>
+
+    <!-- SECOND IMAGE ACCORDION -->
+    <details name="recipe-gallery" style="max-width: 200px;">
+        <summary style="cursor: pointer; list-style: none;">
+        <img src="../img/odin-recipes-2.png" alt="Odin Recipes Thumbnail" style="width: 200px; height: auto; border: 1px solid #7c7c7c;">
+        <p style="font-size: 14px; color: #555; margin: 5px 0; text-align: center;">Click to enlarge</p>
+        </summary>
+        <div style="position: absolute; left: 0; right: 0; text-align: center; margin-top: 10px; z-index: 10;">
+        <img src="../img/odin-recipes-2.png" alt="Odin Recipes Full Size" style="width: 1400px; height: auto; border: 3px solid #7c7c7c;">
+        </div>
+    </details>
+
+    <!-- THIRD IMAGE ACCORDION -->
+    <details name="recipe-gallery" style="max-width: 200px;">
+        <summary style="cursor: pointer; list-style: none;">
+        <img src="../img/odin-recipes-3.png" alt="Odin Recipes Thumbnail" style="width: 200px; height: auto; border: 1px solid #7c7c7c;">
+        <p style="font-size: 14px; color: #555; margin: 5px 0; text-align: center;">Click to enlarge</p>
+        </summary>
+        <div style="position: absolute; left: 0; right: 0; text-align: center; margin-top: 10px; z-index: 10;">
+        <img src="../img/odin-recipes-3.png" alt="Odin Recipes Full Size" style="width: 1400px ; height: auto; border: 3px solid #7c7c7c;">
+        </div>
+    </details>
+
+    </div>
+
+    <!-- Clears the absolute positioning space below so content doesn't overlap later -->
+    <div style="margin-bottom: 2px;"></div>
+
+    <h1>Complete/Inactive Projects</h1>
+    <p>Currently there are no complete or inactive projects to display.</p>
+
+
+
+
+</body>
+</html>
