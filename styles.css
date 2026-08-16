@@ -68,7 +68,7 @@ body {
     font-size: 0.85rem; /* Smaller font size for the link */
 }
 /* Links inside the dark red boxes (.header and .news) */
-.header a, .news a {
+.header a, .news a, .ql a {
     color: #60c7facc;             /* Crisp white for perfect contrast */
     text-decoration: none;      /* Removes messy default underlines */
     font-weight: bold;
@@ -81,7 +81,7 @@ body {
     font-weight: bold;
 }
 
-.gen a:hover, .notes a:hover, .header a:hover, .news a:hover {
+.gen a:hover, .notes a:hover, .header a:hover, .news a:hover, .ql a:hover {
     color: #ffd700;             /* Turns a bright gold when hovered */
     text-decoration: underline;
 }
@@ -108,4 +108,14 @@ body {
 .gen img {
     vertical-align: middle;     /* Aligns icons perfectly with text */
     margin-right: 8px;          /* Adds breathing room after the icon */
+}
+
+.ql {
+    color: #ffffff9a;
+    background-color: #611934fb;
+    padding: 8px;
+    margin: 5px auto;
+    border-radius: 10px;
+    text-align: center;
+    width: fit-content;
 }
