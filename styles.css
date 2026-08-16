@@ -64,11 +64,10 @@ h2 {
     width: fit-content;
 }
 
-.h2 
-
 .header a {
     font-size: 0.85rem; /* Smaller font size for the link */
 }
+
 /* Links inside the dark red boxes (.header and .news) */
 .header a, .news a, .ql a {
     color: #60c7facc;
