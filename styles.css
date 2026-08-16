@@ -1,5 +1,5 @@
 body {
-    background-color: #000000dc;
+    background-color: #000000;
 }
 
 .topnav {
@@ -51,7 +51,7 @@ body {
     width: fit-content;
 }
 
-.section-titles {
+h2 {
     text-decoration: underline;
 }
 
@@ -64,13 +64,15 @@ body {
     width: fit-content;
 }
 
+.h2 
+
 .header a {
     font-size: 0.85rem; /* Smaller font size for the link */
 }
 /* Links inside the dark red boxes (.header and .news) */
 .header a, .news a, .ql a {
-    color: #60c7facc;             /* Crisp white for perfect contrast */
-    text-decoration: none;      /* Removes messy default underlines */
+    color: #60c7facc;
+    text-decoration: none;
     font-weight: bold;
 }
 
