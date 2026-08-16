@@ -2,6 +2,21 @@ body {
     background-color: #000000dc;
 }
 
+.topnav {
+    background-color: #e0437dc9;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 10px;
+    width: fit-content;
+}
+
+.topnav a {
+    color: #ffffff9a;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
 .header {
     color: #ffffff9a;
     text-align: center;
@@ -59,22 +74,24 @@ body {
     font-weight: bold;
 }
 
-.header a:hover, .news a:hover {
-    color: #ffd700;             /* Turns bright gold when hovered */
-    text-decoration: underline; 
-}
-
 /* Links inside the bright green boxes (.gen and .notes) */
-.gen a, .notes a {
+.gen a {
     color: #111111;             /* Deep dark gray/black so it stands out on green */
     text-decoration: none;
     font-weight: bold;
 }
 
-.gen a:hover, .notes a:hover {
+.gen a:hover, .notes a:hover, .header a:hover, .news a:hover {
     color: #ffd700;             /* Turns a bright gold when hovered */
     text-decoration: underline;
 }
+
+/* Change how the link(s) appear in the notes section. Currently commented out to display as a normal link */
+/* .notes a {
+    color: #a12222;
+    text-decoration: none;
+    font-weight: bold;
+} */
 
 /* Fixes for list layout alignment */
 .gen ul {
