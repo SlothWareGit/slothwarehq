@@ -21,7 +21,7 @@ body {
 }
 
 .project-arrow {
-    font-size: 24px;
+    font-size: 1.1rem;
     vertical-align: middle;
     margin-right: 5px;
 }
@@ -47,4 +47,48 @@ body {
     border-radius: 10px;
     text-align: center;
     width: fit-content;
+}
+
+.header a {
+    font-size: 0.85rem; /* Smaller font size for the link */
+}
+/* Links inside the dark red boxes (.header and .news) */
+.header a, .news a {
+    color: #60c7facc;             /* Crisp white for perfect contrast */
+    text-decoration: none;      /* Removes messy default underlines */
+    font-weight: bold;
+}
+
+.header a:hover, .news a:hover {
+    color: #ffd700;             /* Turns bright gold when hovered */
+    text-decoration: underline; 
+}
+
+/* Links inside the bright green boxes (.gen and .notes) */
+.gen a, .notes a {
+    color: #111111;             /* Deep dark gray/black so it stands out on green */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.gen a:hover, .notes a:hover {
+    color: #ffd700;             /* Turns a bright gold when hovered */
+    text-decoration: underline;
+}
+
+/* Fixes for list layout alignment */
+.gen ul {
+    list-style: none;           /* Removes default bullet points */
+    padding: 0;                 /* Removes default indentation */
+    margin: 10px 0;
+}
+
+.gen li {
+    margin: 8px 0;              /* Adds clean spacing between links */
+    text-align: left;           /* Keeps icons and text neatly lined up */
+}
+
+.gen img {
+    vertical-align: middle;     /* Aligns icons perfectly with text */
+    margin-right: 8px;          /* Adds breathing room after the icon */
 }
