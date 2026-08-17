@@ -1,26 +1,58 @@
+
+:root {
+    --bg-main: #646363;
+    --bg-dark-box: #611934fb;
+    --bg-light-box: #17da9f;
+    --text-light: #ffffff;
+    --text-dark: #000000c9;
+    --link-dark-box: #60c7facc;
+    --link-light-box: #000000;
+}
+
+body:has(#theme-black-white:checked) {
+    --bg-main: #646363;
+    --bg-dark-box: #000000;
+    --bg-light-box: #ffffff9c;
+    --text-light: #ffffff;
+    --text-dark: #000000;
+    --link-dark-box: #00ffff;
+    --link-light-box: #000000;
+}
+
+body:has(#theme-red-white:checked) {
+    --bg-main: #646363;
+    --bg-dark-box: #611934fb;
+    --bg-light-box: #ffffff9c;
+    --text-light: #ffffff;
+    --text-dark: #000000c9;
+    --link-dark-box: #60c7facc;
+    --link-light-box: #000000;
+}
+
 body {
-    background-color: #000000;
+    background-color: var(--bg-main);
+    font-family: sans-serif;
 }
 
 .topnav {
-    background-color: #e0437dc9;
+    background-color: var(--bg-light-box);
     padding: 8px;
-    margin: 5px 0;
+    margin: 5px auto;
     border-radius: 10px;
     width: fit-content;
 }
 
 .topnav a {
-    color: #ffffff9a;
+    color: var(--text-dark);
     text-decoration: none;
     font-weight: bold;
     margin: 0 10px;
 }
 
 .header {
-    color: #ffffff9a;
+    color: var(--text-light);
     text-align: center;
-    background-color: #611934fb;
+    background-color: var(--bg-dark-box);
     padding: 8px;
     margin: 5px auto;
     border-radius: 15px;
@@ -28,7 +60,7 @@ body {
 }
 
 .gen {
-    background-color: #17da9f;
+    background-color: var(--bg-light-box);
     padding: 8px;
     margin: 5px auto;
     border-radius: 10px;
@@ -42,8 +74,8 @@ body {
 }
 
 .news {
-    color: #ffffff9a;
-    background-color: #611934fb;
+    color: #ffffff;
+    background-color: var(--bg-dark-box);
     padding: 8px;
     margin: 5px auto;
     border-radius: 10px;
@@ -56,7 +88,8 @@ h2 {
 }
 
 .notes {
-    background-color: #17da9f;
+    color: var(--text-dark);
+    background-color: var(--bg-light-box);
     padding: 8px;
     margin: 5px auto;
     border-radius: 10px;
@@ -65,58 +98,81 @@ h2 {
 }
 
 .header a {
-    font-size: 0.85rem; /* Smaller font size for the link */
+    font-size: 0.85rem; 
 }
 
-/* Links inside the dark red boxes (.header and .news) */
 .header a, .news a, .ql a {
-    color: #60c7facc;
+    color: var(--link-dark-box);
     text-decoration: none;
     font-weight: bold;
 }
 
-/* Links inside the bright green boxes (.gen and .notes) */
 .gen a {
-    color: #111111;             /* Deep dark gray/black so it stands out on green */
+    color: var(--link-light-box);             
     text-decoration: none;
     font-weight: bold;
 }
 
-.gen a:hover, .notes a:hover, .header a:hover, .news a:hover, .ql a:hover {
-    color: #ffd700;             /* Turns a bright gold when hovered */
+.topnav a:hover, .gen a:hover, .notes a:hover, .header a:hover, .news a:hover, .ql a:hover, .theme-switcher label:hover {
+    color: #ffd700;
     text-decoration: underline;
+    cursor: pointer;
 }
 
-/* Change how the link(s) appear in the notes section. Currently commented out to display as a normal link */
-/* .notes a {
-    color: #a12222;
-    text-decoration: none;
-    font-weight: bold;
-} */
-
-/* Fixes for list layout alignment */
 .gen ul {
-    list-style: none;           /* Removes default bullet points */
-    padding: 0;                 /* Removes default indentation */
+    list-style: none;           
+    padding: 0;                 
     margin: 10px 0;
 }
 
 .gen li {
-    margin: 8px 0;              /* Adds clean spacing between links */
-    text-align: left;           /* Keeps icons and text neatly lined up */
+    margin: 8px 0;              
+    text-align: left;           
 }
 
 .gen img {
-    vertical-align: middle;     /* Aligns icons perfectly with text */
-    margin-right: 8px;          /* Adds breathing room after the icon */
+    vertical-align: middle;     
+    margin-right: 8px;          
 }
 
 .ql {
-    color: #ffffff9a;
-    background-color: #611934fb;
+    color: var(--text-light);
+    background-color: var(--bg-dark-box);
     padding: 8px;
     margin: 5px auto;
     border-radius: 10px;
     text-align: center;
     width: fit-content;
+}
+
+.rainbow-text:hover {
+  background: linear-gradient(to right, #FF1493, purple, #28c930, #00FFFF, #FF1493);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent; 
+}
+
+/* ==========================================
+   4. THEMING CONTROLS UI STYLING
+   ========================================== */
+.theme-switcher {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin: 10px auto;
+    width: fit-content;
+    font-family: sans-serif;
+    font-size: 0.9rem;
+}
+
+.theme-switcher input {
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.theme-switcher label {
+    font-weight: bold;
+    margin-left: 3px;
 }
