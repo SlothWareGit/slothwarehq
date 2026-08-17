@@ -2,60 +2,88 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="../styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SlothWare HQ | Projects</title>
 </head>
 <body>
-    <strong><a href="../index.html">Home</a></strong>
-    <h1>Active Projects</h1>
-    <p>This is a simple recipe website, it doesn't have much, but is my first project through "The Odin Project".<br><a href="https://slothwaregit.github.io/odin-recipes/" target="_blank" rel="noreferrer noopener">View the Recipe Website - Odin Recipes</a></p>
-    <!-- Flexbox container to arrange items side-by-side with spacing -->
-    <div style="display: flex; gap: 20px; flex-wrap: wrap; align-items: flex-start;">
+    <div class="theme-switcher">
+        <span>Choose Theme: </span>
+        <input type="radio" id="theme-red-teal" name="theme">
+        <label for="theme-red-teal">Red & Teal</label>
 
-    <!-- FIRST IMAGE ACCORDION -->
-    <details name="recipe-gallery" style="max-width: 200px;">
-        <summary style="cursor: pointer; list-style: none;">
-        <img src="../img/odin-recipes-1.png" alt="Odin Recipes Thumbnail" style="width: 200px; height: auto; border: 1px solid #7c7c7c;">
-        <p style="font-size: 14px; color: #555; margin: 5px 0; text-align: center;">Click to enlarge</p>
-        </summary>
-        <!-- Absolute positioning breaks it out of the flex row so it expands below -->
-        <div style="position: absolute; left: 0; right: 0; text-align: center; margin-top: 10px; z-index: 10;">
-        <img src="../img/odin-recipes-1.png" alt="Odin Recipes Full Size" style="width: 1200px; height: auto; border: 3px solid #7c7c7c;">
-        </div>
-    </details>
+        <input type="radio" id="theme-black-white" name="theme">
+        <label for="theme-black-white">Black & White</label>
 
-    <!-- SECOND IMAGE ACCORDION -->
-    <details name="recipe-gallery" style="max-width: 200px;">
-        <summary style="cursor: pointer; list-style: none;">
-        <img src="../img/odin-recipes-2.png" alt="Odin Recipes Thumbnail" style="width: 200px; height: auto; border: 1px solid #7c7c7c;">
-        <p style="font-size: 14px; color: #555; margin: 5px 0; text-align: center;">Click to enlarge</p>
-        </summary>
-        <div style="position: absolute; left: 0; right: 0; text-align: center; margin-top: 10px; z-index: 10;">
-        <img src="../img/odin-recipes-2.png" alt="Odin Recipes Full Size" style="width: 1200px; height: auto; border: 3px solid #7c7c7c;">
-        </div>
-    </details>
-
-    <!-- THIRD IMAGE ACCORDION -->
-    <details name="recipe-gallery" style="max-width: 200px;">
-        <summary style="cursor: pointer; list-style: none;">
-        <img src="../img/odin-recipes-3.png" alt="Odin Recipes Thumbnail" style="width: 200px; height: auto; border: 1px solid #7c7c7c;">
-        <p style="font-size: 14px; color: #555; margin: 5px 0; text-align: center;">Click to enlarge</p>
-        </summary>
-        <div style="position: absolute; left: 0; right: 0; text-align: center; margin-top: 10px; z-index: 10;">
-        <img src="../img/odin-recipes-3.png" alt="Odin Recipes Full Size" style="width: 1200px ; height: auto; border: 3px solid #7c7c7c;">
-        </div>
-    </details>
-
+        <input type="radio" id="theme-red-white" name="theme" checked>
+        <label for="theme-red-white">Red & White</label>
     </div>
 
-    <!-- Clears the absolute positioning space below so content doesn't overlap later -->
-    <div style="margin-bottom: 2px;"></div>
+    <div class="topnav">
+        <strong><a href="../index.html">Home</a></strong>
+    </div>
 
-    <h1>Complete/Inactive Projects</h1>
-    <p>Currently there are no complete or inactive projects to display.</p>
+    <div class="header">
+        <h1><span class="rainbow-text">Active Projects</span></h1>
+    </div>
 
+    <!-- This wrapper brings back your light box box styling for the content and thumbnails -->
+    <div class="notes">
+        <p>This is a simple recipe website, it doesn't have much, but is my first project through "The Odin Project".<br>
+        <a href="https://github.io" target="_blank" rel="noreferrer noopener">View the Recipe Website - Odin Recipes</a></p>
+        
+        <div class="gallery-container">
 
+            <!-- FIRST IMAGE ACCORDION -->
+            <details name="recipe-gallery" class="recipe-card">
+                <summary>
+                    <img src="../img/odin-recipes-1.png" alt="Odin Recipes Thumbnail" class="thumb-img">
+                    <p class="click-text">Click to enlarge</p>
+                </summary>
+                <div class="lightbox-overlay" tabindex="0">
+                    <!-- Dummy element that closes the gallery when clicked -->
+                    <details name="recipe-gallery" class="close-trigger">
+                        <summary aria-label="Close lightbox" style="font-size: 4rem;">&times;</summary>
+                    </details>
+                    <img src="../img/odin-recipes-1.png" alt="Odin Recipes Full Size" class="full-img">
+                </div>
+            </details>
 
+            <!-- SECOND IMAGE ACCORDION -->
+            <details name="recipe-gallery" class="recipe-card">
+                <summary>
+                    <img src="../img/odin-recipes-2.png" alt="Odin Recipes Thumbnail" class="thumb-img">
+                    <p class="click-text">Click to enlarge</p>
+                </summary>
+                <div class="lightbox-overlay" tabindex="0">
+                    <details name="recipe-gallery" class="close-trigger">
+                        <summary aria-label="Close lightbox" style="font-size: 4rem;">&times;</summary>
+                    </details>
+                    <img src="../img/odin-recipes-2.png" alt="Odin Recipes Full Size" class="full-img">
+                </div>
+            </details>
+
+            <!-- THIRD IMAGE ACCORDION -->
+            <details name="recipe-gallery" class="recipe-card">
+                <summary>
+                    <img src="../img/odin-recipes-3.png" alt="Odin Recipes Thumbnail" class="thumb-img">
+                    <p class="click-text">Click to enlarge</p>
+                </summary>
+                <div class="lightbox-overlay" tabindex="0">
+                    <details name="recipe-gallery" class="close-trigger">
+                        <summary aria-label="Close lightbox" style="font-size: 4rem;">&times;</summary>
+                    </details>
+                    <img src="../img/odin-recipes-3.png" alt="Odin Recipes Full Size" class="full-img">
+                </div>
+            </details>
+
+        </div>
+    </div>
+
+    <div class="news">
+        <h2><span class="rainbow-text">Complete/Inactive Projects</span></h2>
+        <p>Currently there are no complete or inactive projects to display.</p>
+    </div>
 
 </body>
 </html>
